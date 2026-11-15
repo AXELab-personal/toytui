@@ -176,8 +176,8 @@ setTermSize
 # playfield elements 
 main=`$t box new id:main border:1 bg:$bgcol title:"..:: TUIPONG ::.." titlePos:right`
 
-info=`$t box new id:info border:1 bg:73 fg:black w:25 h:5 x:3 y:2 z_index:99`
-intota=`$t textarea new id:infota parent:$info text:"brakcet: [UP]/[DOWN]\nexit:[Q]"`
+info=`$t box new id:info border:1 bg:73 fg:black w:23 h:5 x:3 y:2 z_index:99`
+intota=`$t textarea new id:infota parent:$info text:"Rakcet: [UP]/[DOWN]\nRestart:[ENTER]\nExit:[Q]"`
 gateY=$(( (termh /2)-(gateH /2 ) ))
 gateX=$((termw - 1))
 
