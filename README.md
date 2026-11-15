@@ -43,9 +43,6 @@ profit, recognition, or an audience.
 - GNU `make`
 - A terminal
 
-Language: C++17 (`-std=c++17`).
-
-No external C++ libraries are required.
 
 The only vendored C dependency is `libvterm`, included in
 `third_party/vterm/` in its original, unmodified form.
