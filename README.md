@@ -49,7 +49,7 @@ make
 ### With Git clone
 
 ```sh
-git clone https://github.com/AXELab-personal/toytui/toytui.git
+git clone https://github.com/AXELab-personal/toytui.git
 cd toytui
 make clean
 make
