@@ -36,6 +36,23 @@ profit, recognition, or an audience.
 
 ## Installation and build
 
+## Requirements
+
+- Linux :)
+- `g++` 12.2 or newer (tested with: 14.2.0, 13.3.0, 12.2.0. On  g++ 12.2.0, `-Wno-psabi` may be required).
+- GNU `make`
+- A terminal
+
+Language: C++17 (`-std=c++17`).
+
+No external C++ libraries are required.
+
+The only vendored C dependency is `libvterm`, included in
+`third_party/vterm/` in its original, unmodified form.
+
+- License: MIT
+- Language: C99
+
 ### From a downloaded ZIP
 
 ```sh
