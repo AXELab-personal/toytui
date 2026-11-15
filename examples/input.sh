@@ -1,9 +1,11 @@
 #!/bin/bash
 
-
-rm ./toytui.state
+clear
 
 t="../build/release/toytui"
+rm toytui.state
+dummy=`$t core set mode destroy` 
+dummy=`$t core set term_cursor:off`
 
 
 imp=$($t input new id:inp y:2 keys_accept:[ENTER] keys_exit:[TAB] \
@@ -16,4 +18,5 @@ ret=`$t core get keyboard`
 echo; echo
 echo "output:"
 echo $ret
+$t core set term_cursor:on
 $t core set mode:destroy
