@@ -1,0 +1,9 @@
+libvterm (neovim fork), version 0.3.3, git commit 934bc2f (2025-11-20)
+Source: https://github.com/neovim/libvterm
+Licence: MIT (see LICENSE)
+
+Vendored UNMODIFIED, so that updating is a plain directory replacement:
+  include/*.h, src/*.c, src/*.h, src/encoding/*.inc, src/fullwidth.inc
+Left out: bin/, t/ (tests), doc/, Makefile, *.tbl, find-wide-chars.pl
+(the generated tables *.inc are included, so Perl is not needed).
+Compiled as C99 by the toytui Makefile (see the `third_party` rules there).
