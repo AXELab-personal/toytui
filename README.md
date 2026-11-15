@@ -77,10 +77,11 @@ the daemon mode — is available here:
 
 ## License
 
-`toytui` is available under the GNU General Public License v3.0 (GPL-3.0).
+`toytui` is available under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
 The bundled `libvterm` library is MIT-licensed. Both the code and the
 license are included in the repository in their original, unmodified form.
+See `THIRD_PARTY.md` for details.
 See [THIRD_PARTY.md](THIRD_PARTY.md) for details.
 
 ## Maintenance
