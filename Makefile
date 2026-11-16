@@ -1,13 +1,3 @@
-# toytui — Makefile
-#
-# Használat:
-#   make               -> release build (build/release/toytui)
-#   make BUILD=debug   -> debug build (-g -O0)
-#   make BUILD=sanitize-> ASan+UBSan build
-#   make test          -> unit tesztek fordítása + futtatása
-#   make e2e           -> end-to-end szkriptek (tests/e2e/*.sh) a release binárison
-#   make clean
-
 CXX      := g++
 CC       := gcc
 CXXSTD   := -std=c++17
@@ -73,8 +63,6 @@ test: $(UNIT_BINS)
 	done; \
 	test $$ok -eq 1
 
-# A szkriptek a binárist első argumentumként kapják (abszolút úttal, mert
-# saját tmp-könyvtárba lépnek).
 e2e: $(TARGET)
 	@ok=1; \
 	for t in tests/e2e/*.sh; do \
