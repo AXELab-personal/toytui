@@ -36,32 +36,21 @@ profit, recognition, or an audience.
 
 ## Installation and build
 
-### Requirements
+### With Git clone
 
-- GNU/Linux
-- `g++` 12.2+ (tested: 14.2.0, 13.3.0, 12.2.0; `-Wno-psabi` may be needed on 12.2.0)
-- GNU `make`
-- A terminal
-
-C++17, no external C++ libraries.
-
-Vendored C dependency: `libvterm` (MIT, C99, unmodified), in `third_party/vterm/`.
+```sh
+git clone https://github.com/AXELab-personal/toytui/toytui.git
+cd toytui
+make clean
+make
+```
 
 ### From a downloaded ZIP
 
 ```sh
 wget https://github.com/AXELab-personal/toytui/archive/refs/heads/main.zip
-unzip toytui-main.zip
+unzip main.zip
 cd toytui-main
-make clean
-make
-```
-
-### With Git clone
-
-```sh
-git clone https://github.com/AXELab-personal/toytui.git
-cd toytui
 make clean
 make
 ```
@@ -84,15 +73,14 @@ After building, the `toytui` executable is located in the
 The full user guide — commands, elements, parameters, key bindings, and
 the daemon mode — is available here:
 
-- [User guide](docs/User_Guide.md)
+- [User guide](docs/user-guide.md)
 
 ## License
 
-`toytui` is available under the GNU Affero General Public License v3.0 (AGPL-3.0).
+`toytui` is available under the GNU General Public License v3.0 (GPL-3.0).
 
 The bundled `libvterm` library is MIT-licensed. Both the code and the
 license are included in the repository in their original, unmodified form.
-See `THIRD_PARTY.md` for details.
 See [THIRD_PARTY.md](THIRD_PARTY.md) for details.
 
 ## Maintenance
