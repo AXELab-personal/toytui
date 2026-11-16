@@ -36,21 +36,32 @@ profit, recognition, or an audience.
 
 ## Installation and build
 
-### With Git clone
+### Requirements
 
-```sh
-git clone https://github.com/AXELab-personal/toytui/toytui.git
-cd toytui
-make clean
-make
-```
+- GNU/Linux
+- `g++` 12.2+ (tested: 14.2.0, 13.3.0, 12.2.0; `-Wno-psabi` may be needed on 12.2.0)
+- GNU `make`
+- A terminal
+
+C++17, no external C++ libraries.
+
+Vendored C dependency: `libvterm` (MIT, C99, unmodified), in `third_party/vterm/`.
 
 ### From a downloaded ZIP
 
 ```sh
 wget https://github.com/AXELab-personal/toytui/archive/refs/heads/main.zip
-unzip main.zip
+unzip toytui-main.zip
 cd toytui-main
+make clean
+make
+```
+
+### With Git clone
+
+```sh
+git clone https://github.com/AXELab-personal/toytui.git
+cd toytui
 make clean
 make
 ```
@@ -61,23 +72,30 @@ After building, the `toytui` executable is located in the
 ## Quick example
 
 ```sh
-./toytui box new id:mainbox x:2 y:1 w:40 h:10 border:1 title:'LOG'
+./toytui box new id:mainbox x:2 y:1 w:40 h:10 border:1 title:'Example'
 ./toytui label new id:label1 parent:box@mainbox fg:green \
   text:'test: \e[1m42\e[0m'
 ./toytui core set setfocus:box@mainbox
 ./toytui core get keyboard keys_exit:'[CTRL-Q]'
 ```
 
+## Platform notes
+
+`toytui` is Linux-only and writes directly to the TTY. It is intended for
+users who are comfortable with the Linux command line and shell scripting.
+
+It has not been designed or tested for screen-reader use.
+
 ## Documentation
 
 The full user guide — commands, elements, parameters, key bindings, and
 the daemon mode — is available here:
 
-- [User guide](docs/user-guide.md)
+- [User guide](docs/User_Guide.md)
 
 ## License
 
-`toytui` is available under the GNU General Public License v3.0 (GPL-3.0).
+`toytui` is available under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
 The bundled `libvterm` library is MIT-licensed. Both the code and the
 license are included in the repository in their original, unmodified form.
